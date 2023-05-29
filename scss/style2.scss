@@ -1,0 +1,36 @@
+@use "utils" as u;
+
+.flex-row {
+  @include u.flexRow;
+}
+.flex {
+  @include u.flex;
+}
+.align {
+  @include u.align;
+}
+.justify {
+  @include u.justify;
+}
+.wrapper {
+  width: 80%;
+  margin-inline: auto;
+
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
+}
+.btn {
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn.btn-danger {
+  background: u.$color-danger;
+
+  &:hover {
+    background: u.$color-danger-varient;
+  }
+}
